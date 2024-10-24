@@ -1,0 +1,188 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #d4b2f5;
+    color: #333;
+}
+
+/* Estilo del header */
+header {
+    background: linear-gradient(135deg, #3c7dc7, #72a4e4);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Animación para las letras del header */
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0; /* Empieza invisible */
+    animation: slideIn 2s ease-in-out forwards; /* Define la animación */
+}
+
+/* Animación personalizada */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%); /* Fuera de la pantalla por la izquierda */
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5; /* Mientras aparece */
+    }
+    100% {
+        transform: translateX(0); /* Posición original */
+        opacity: 1; /* Totalmente visible */
+    }
+}
+
+/* Estilo del menú de navegación */
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    background-color: #184374;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1b4977;
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+/* Estilo de los encabezados */
+h4 {
+    color: #333;
+    margin: 20px 0;
+    font-size: 1.8em;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+h3 {
+    color: #338ab3;
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    overflow-x: auto;
+    display: block;
+    background-color: #af91c0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #9432b3;
+    color: rgb(37, 36, 36);
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #8671ff;
+}
+
+tr:hover {
+    background-color: #4979ff;
+}
+
+/* Estilo de las imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.image-center {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: #72a4e4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    table {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 10px 0;
+    }
+
+    h4 {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+}
